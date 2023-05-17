@@ -4,17 +4,20 @@ const ejs = require("ejs");
 const _ = require("lodash");
 const mongoose = require("mongoose");
 const  ObjectID = require('mongodb').ObjectId;
+require("dotenv").config();
+
+const PORT = process.env.PORT || 3000;
 
 const app = express();
 
 app.set('view engine', 'ejs');
 
 app.use(bodyParser.urlencoded({ extended: true }));
-app.use(express.static("public"));
+app.use(express.static("public"));  
 
 const connectDB = async () => {
   try {
-    const mongcon = mongoose.connect("mongodb+srv://admin-shubham:admin%40123@cluster0.53egf2p.mongodb.net/blogDB");
+    const mongcon = mongoose.connect(process.env.MONGO_URI);
     console.log("Mongoose connected");
   }
   catch (err) {
