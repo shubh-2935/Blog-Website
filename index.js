@@ -14,7 +14,7 @@ app.set('view engine', 'ejs');
 
 app.use(bodyParser.urlencoded({ extended: true }));
 app.use(express.static("public")); 
- 
+
 mongoose.set("strictQuery", false);
 
 const connectDB = async () => {
@@ -93,7 +93,7 @@ app.get("/posts/:postId", async (req, res) => {
 
 
 connectDB().then(() => {
-  app.listen(3000, () => {
+  app.listen(PORT, () => {
     console.log("Listening on port");
   })
 })
