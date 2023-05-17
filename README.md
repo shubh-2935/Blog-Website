@@ -1,7 +1,7 @@
 # Explore Ancient Civilizations Blog Website
 This is a blog website dedicated to exploring ancient civilizations. It provides articles, insights, and stories about various ancient countries and civilizations, such as Egypt, Greece, China, and more.
 
-• Checkout website at:
+• Checkout website at: https://blog-website-delta-vert.vercel.app/
 
 # Technologies and Languages Used
 •	Backend Framework: Express.js
